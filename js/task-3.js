@@ -1,8 +1,18 @@
+
+function convertToNumbers(value) {
+    return Number.parseFloat(value);
+}
+
+
 function getElementWidth(content, padding, border) {
-    const padding=padding*2;
-          border *= 2;
+    content = convertToNumbers(content);
+    padding = convertToNumbers(padding);
+    border = convertToNumbers(border);
+   
+
+    const result = content + (padding*2) + (border*2);
           
-       return content+padding+border;
+       return result;
 }
 
 
